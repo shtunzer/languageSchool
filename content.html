@@ -35,6 +35,11 @@
                         <a href="index.html" class="header__logo">
                             <img src="assets/images/logo.svg" class="header__logo-img">
                         </a>
+                        <button class="burger-btn" id="burger-btn-open">
+                            <span class="burger-span"></span>
+                            <span class="burger-span"></span>
+                            <span class="burger-span"></span>
+                        </button>
                         <ul class="header__list">
                             <li class="header__list-item"><a href="#" class="header__list-link">О нас</a></li>
                             <li class="header__list-item"><a href="#" class="header__list-link">Расписание и оплата</a></li>
@@ -51,6 +56,16 @@
             </div>
         </header>
         <main class="main">
+            <section class="burger__menu" id="burger__menu">
+                <div class="burger__inner">
+                    <button class="burger__menu-btn" id="burger-btn-hide">
+                        <img src="assets/images/hide.svg" class="burger__menu-img">
+                    </button>
+                    <a href="service.html" class="burger-link">Обучение в испании</a>
+                    <a href="contacts.html" class="burger-link">Контакты</a>
+                    <a href="content.html" class="burger-link">Фотогалерея</a>
+                </div>
+            </section>
             <section class="content">
                 <div class="container">
                     <div class="content__inner">
@@ -154,7 +169,7 @@
                             <a href="#" class="footer__box-text">Лингвистические лагеря</a>
                             <a href="#" class="footer__box-text">Оформление визы на обучение</a>
                         </div>
-                        <div class="footer__box"
+                        <div class="footer__box">
                             <h2 class="footer__box-title">Экзамены</h2>
                             <a href="#" class="footer__box-text">MSK 1</a>
                             <a href="#" class="footer__box-text">OPT</a>
@@ -182,4 +197,5 @@
         </footer>
     </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>
