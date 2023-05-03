@@ -203,7 +203,7 @@ button{
 }
 
 .aboutUs-img{
-    opacity: 0.08;
+    opacity: 0.15;
     display: block;
 }
 
@@ -286,6 +286,7 @@ button{
 
 .tabs__content-card{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tabs__price{
@@ -352,14 +353,16 @@ button{
     padding-top: 150px;
 }
 
-.exams__content{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.exams__content,
+.news__content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 
-.exams-card{
+.exams-card,
+.news-card{
     width: 306px;
+    margin: 0 auto;
 }
 
 .exams-card__textBox{
@@ -422,15 +425,14 @@ button{
     letter-spacing: 0.01em;
 }
 
-.events__content,
-.news__content{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.events__content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 .events-card{
     width: 416px;
+    margin: 0 auto;
 }
 
 .events-card-img{
@@ -462,10 +464,6 @@ button{
 }
 
 /* NEWS */
-
-.news-card{
-    width: 306px;
-}
 
 .news-card-title{
     font-weight: 700;
@@ -787,4 +785,430 @@ button{
     height: 400px;
     width: 400px;
     margin-top: 40px;
+}
+
+/* BURGER */
+
+.burger-btn{
+    display: none;
+}
+
+.burger-span{
+    width: 34px;
+    height: 3px;
+    display: block;
+    background: #EC1B2E;
+    border-radius: 2px;
+}
+
+.burger-span + .burger-span{
+    margin-top: 7px;
+}
+
+.burger__menu{
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    background: #fff;
+    transform: translateX(100%);
+    transition: all .2s;
+}
+
+.burger__menu.--show{
+    transform: translateX(0);
+}
+
+.burger__menu-btn{
+    display: block;
+    margin: 30px auto;
+}
+
+.burger__menu-img{
+    display: block;
+}
+
+.burger-link{
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+/* MEDIA */
+
+@media (max-width: 1780px){
+    .swiper-btn-next{
+        right: 75px;
+    }
+    .swiper-btn-prev{
+        left: 75px;
+    }
+}
+
+@media (max-width: 1630px){
+    .swiper-btn-next{
+        right: 25px;
+    }
+    .swiper-btn-prev{
+        left: 25px;
+    }
+}
+
+@media (max-width: 1530px){
+    .swiper-btn-next{
+        top: 570px;
+        right: 30px;
+    }
+    .swiper-btn-prev{
+        top: 570px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 1340px){
+    .swiper-btn-next{
+        top: 570px;
+        left: 110px;
+    }
+    .swiper-btn-prev{
+        top: 570px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 1300px){
+    .events__content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .events-card + .events-card + .events-card{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1290px){
+    .exams__content,
+    .news__content{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .exams-card + .exams-card + .exams-card,
+    .news-card + .news-card + .news-card{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1190px){
+    .header__list{
+        display: none;
+    }
+    .burger-btn{
+        display: block;
+    }
+}
+
+@media (max-width: 1112px){
+    .tabs__content-table{
+        display: none;
+    }
+    .tabs__content-card{
+        margin: 0 auto;
+        max-width: 596px;
+    }
+}
+
+@media (max-width: 1110px){
+    .service-img,
+    .content-img{
+        width: 800px;
+        margin-left: 0;
+    }
+    .content-img{
+        margin: 0 auto 80px;
+    }
+    .content-title{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1100px){
+    .aboutUs-img{
+        display: none;
+    }
+    .aboutUs__textBox{
+        margin: 0 auto;
+    }
+    .footer__top{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1080px){
+    .service-img{
+        margin-left: auto;
+    }
+    .service-title{
+        text-align: center;
+    }
+    .service-box-img{
+        display: none;
+    }
+    .service__textBox{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1040px){
+    .contacts__contactbox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contacts__box{
+        margin: 0 auto;
+    }
+    .contacts__box + .contacts__box + .contacts__box{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1020px){
+    .header__top{
+        display: none;
+    }
+    .header__logo-img{
+        width: 40px;
+    }
+    .tabs__btnBox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tabs__btnBox-btn{
+        margin: 0 auto;
+    }
+    .tabs__btnBox-btn + .tabs__btnBox-btn + .tabs__btnBox-btn{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 950px){
+    .footer__top{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer__box + .footer__box + .footer__box{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 890px){
+    .events__content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .events-card + .events-card{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 840px){
+    .service-img,
+    .content-img{
+        display: none;
+    }
+    .service-text{
+        max-width: 400px;
+        margin: 0 auto 40px;
+    }
+    .service-textBox{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 700px){
+    .footer__top{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__box + .footer__box{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 680px){
+    .exams__content,
+    .news__content{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .exams-card + .exams-card,
+    .news-card + .news-card{
+        margin-top: 40px;
+    }
+    .exams-title,
+    .news-title{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 660px){
+    .contacts__contactbox{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contacts__box + .contacts__box{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 650px){
+    .aboutUs__textBox{
+        padding: 0 50px 40px;
+    }
+}
+
+@media (max-width: 640px){
+    .tabs__btnBox{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .tabs__btnBox-btn{
+        margin: 0 auto;
+        font-size: 18px;
+    }
+    .tabs__btnBox-btn + .tabs__btnBox-btn + .tabs__btnBox-btn{
+        margin-top: 15px;
+    }
+    .tabs__btnBox-btn + .tabs__btnBox-btn{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 630px){
+    .slide-1-title{
+        font-size: 32px;
+    }
+    .slide-1__textBox{
+        max-width: 355px;
+    }
+    .swiper-slide{
+        height: 600px;
+    }
+    .swiper-btn-next,
+    .swiper-btn-prev{
+        top: 500px;
+    }
+
+}
+
+@media (max-width: 610px){
+    .content__btnBox{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .content__btnBox-link{
+        max-width: 86px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 570px){
+    .aboutUs__textBox-title{
+        margin-top: 15px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 510px){
+    .aboutUs__textBox-title{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 490px){
+    .footer__top{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer__contacts{
+        margin: 0 auto;
+    }
+    .footer__box{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 460px){
+    .tabs-title{
+        font-size: 32px;
+        max-width: 278px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 450px){
+    .slide-1-title{
+        font-size: 21px;
+    }
+    .slide-1__textBox{
+        max-width: 235px;
+    }
+    .swiper-slide{
+        height: 500px;
+    }
+    .swiper-btn-next,
+    .swiper-btn-prev{
+        top: 420px;
+    }
+    .aboutUs{
+        padding-top: 0;
+    }
+    .events-card{
+        max-width: 320px;
+    }
+    .events-card-img{
+        width: 320px;
+        margin: 0 auto;
+    }
+    .events-card__textBox{
+        width: 320px;
+        padding: 30px 15px 0;
+        margin: 0 auto;
+    }
+    .service-text{
+        max-width: 300px;
+    }
+    .service-textBox{
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 400px){
+    .aboutUs__textBox-title{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .aboutUs__textBox-text{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px){
+    .events-card{
+        max-width: 310px;
+    }
+    .events-card-img{
+        width: 310px;
+        margin: 0 auto;
+    }
+    .events-card__textBox{
+        width: 310px;
+        padding: 30px 10px 0;
+        margin: 0 auto;
+    }
 }
